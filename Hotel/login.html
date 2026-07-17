@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Ananta Stay</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins, sans-serif;
+}
+
+
+body{
+    background:#FAF9F6;
+}
+
+
+/* Main Container */
+
+.login-container{
+
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px 8%;
+    gap:50px;
+
+}
+
+
+/* Left Side */
+
+.join-section{
+
+    width:50%;
+}
+
+
+.join-section h1{
+
+    font-size:40px;
+    color:#5D4037;
+    margin-bottom:20px;
+
+}
+
+
+.join-section p{
+
+    color:#555;
+    line-height:1.7;
+}
+
+
+.benefits{
+
+    margin-top:30px;
+
+}
+
+
+.benefits h3{
+
+    color:#D4AF37;
+    margin-bottom:15px;
+
+}
+
+
+.benefits li{
+
+    list-style:none;
+    margin:15px 0;
+    color:#333;
+
+}
+
+
+
+/* Right Side */
+
+.login-box{
+
+    width:420px;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+
+}
+
+
+.login-box h2{
+
+    color:#5D4037;
+    margin-bottom:10px;
+
+}
+
+
+.login-box p{
+
+    color:#555;
+    margin-bottom:25px;
+
+}
+
+
+.login-box input{
+
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+
+}
+
+
+.checkbox{
+
+    display:flex;
+    gap:10px;
+    align-items:center;
+    margin-bottom:20px;
+
+}
+
+
+.checkbox input{
+
+    width:auto;
+
+}
+
+
+.checkbox label{
+
+    font-size:14px;
+    color:#555;
+
+}
+
+
+
+button{
+
+    width:100%;
+    padding:14px;
+    background:#D4AF37;
+    border:none;
+    border-radius:8px;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+
+}
+
+
+
+@media(max-width:768px){
+
+    .login-container{
+
+        flex-direction:column;
+
+    }
+
+
+    .join-section,
+    .login-box{
+
+        width:100%;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="login-container">
+
+
+<!-- Left Side -->
+
+<div class="join-section">
+
+
+<h1>Not a Member?</h1>
+
+<h2>Join Us Now</h2>
+
+
+<p>
+Become a member of Ananta Stay and enjoy exclusive privileges,
+personalised services and special offers.
+</p>
+
+
+<div class="benefits">
+
+<h3>Member Benefits</h3>
+
+
+<ul>
+
+<li>✨ Exclusive room discounts</li>
+
+<li>✨ Priority booking access</li>
+
+<li>✨ Special offers & rewards</li>
+
+<li>✨ Faster and easier reservations</li>
+
+<li>✨ Premium guest experience</li>
+
+</ul>
+
+
+</div>
+
+
+</div>
+
+
+
+<!-- Right Side -->
+
+
+<div class="login-box">
+
+
+<h2>Already a Member?</h2>
+
+<p>Login to continue your journey with us</p>
+
+
+
+<form>
+
+
+<input type="text" placeholder="Email ID or Mobile Number">
+<input type="password" placeholder="Password">
+<input type="text" id="name" placeholder="Enter Your Name">
+
+
+
+<div class="checkbox">
+<input type="checkbox" id="terms">
+<label for="terms">
+I agree to Terms & Conditions and Privacy Policy
+</label>
+
+</div>
+<button onclick="loginUser()">
+Login
+</button>
+
+
+
+</form>
+
+
+
+</div>
+</div>
+
+<script>
+
+function loginUser(){
+
+    let user = document.querySelector("input[type='text']").value;
+
+    let password = document.querySelector("input[type='password']").value;
+
+
+    if(user !== "" && password !== ""){
+
+        localStorage.setItem("username", user);
+
+        alert("Login Successful!");
+
+        window.location.href="index.html";
+
+    }
+
+    else{
+
+        alert("Please enter details");
+
+    }
+
+}
+
+</script>
+
+
+<script>
+
+function loginUser(){
+
+    let name = document.getElementById("name").value;
+
+    if(name !== ""){
+
+        localStorage.setItem("username", name);
+
+        alert("Login Successful!");
+
+        window.location.href = "index.html";
+
+    }
+
+    else{
+
+        alert("Please enter your name");
+
+    }
+
+}
+</script>
+</body>
+
+</html>
