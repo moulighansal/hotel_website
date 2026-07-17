@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mourna Stay | About Us</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ---------- NAVBAR ---------- */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(93,64,55,.75);
+backdrop-filter:blur(8px);
+z-index:999;
+}
+
+.logo{
+font-family:'Playfair Display',serif;
+font-size:34px;
+font-weight:bold;
+color:#D4AF37;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:35px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:16px;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#D4AF37;
+}
+
+.book-btn{
+background:#D4AF37;
+padding:12px 28px;
+border-radius:40px;
+color:#5D4037;
+text-decoration:none;
+font-weight:600;
+transition:.4s;
+}
+
+.book-btn:hover{
+background:white;
+}
+/* ---------- GENERAL ---------- */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#FAF9F6;
+color:#333333;
+overflow-x:hidden;
+}
+
+
+/* ---------- ABOUT HERO ---------- */
+
+.about-hero{
+
+height:90vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+color:white;
+
+}
+
+.hero-content{
+
+max-width:760px;
+
+padding:20px;
+
+}
+
+.hero-content h1{
+
+font-family:'Playfair Display',serif;
+
+font-size:70px;
+
+margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+font-size:20px;
+
+line-height:1.8;
+
+margin-bottom:35px;
+
+}
+
+.hero-btn{
+
+display:inline-block;
+
+padding:15px 35px;
+
+background:#D4AF37;
+
+color:#5D4037;
+
+text-decoration:none;
+
+border-radius:40px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.hero-btn:hover{
+
+background:white;
+
+transform:translateY(-5px);
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #FAF9F6;
+}
+/* OUR STORY */
+
+.story-section{
+    padding: 90px 10%;
+    background: #FAF9F6;
+}
+
+.story-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.story-image{
+    flex: 1;
+}
+
+.story-image img{
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.story-content{
+    flex: 1;
+}
+
+.story-content h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #5D4037;
+    margin-bottom: 25px;
+}
+
+.story-content p{
+    font-size: 17px;
+    color: #555;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+@media (max-width:768px){
+
+.story-container{
+    flex-direction: column;
+    text-align: center;
+}
+
+.story-content h2{
+    font-size: 34px;
+}
+.mission-container{
+    flex-direction: column-reverse;
+    text-align: center;
+}
+
+.mission-content h2{
+    font-size: 34px;
+}
+}
+
+/* OUR MISSION */
+
+.mission-section{
+    padding: 90px 10%;
+    background: #fff;
+}
+
+.mission-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.mission-content{
+    flex: 1;
+}
+
+.mission-content h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #5D4037;
+    margin-bottom: 25px;
+}
+
+.mission-content p{
+    font-size: 17px;
+    color: #555;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.mission-image{
+    flex: 1;
+}
+
+.mission-image img{
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+/* OUR VALUES */
+
+.values-section{
+    padding: 90px 10%;
+    background: #FAF9F6;
+    text-align: center;
+}
+
+.values-section h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #5D4037;
+    margin-bottom: 50px;
+}
+
+.values-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.value-card{
+    background: white;
+    padding: 35px 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+}
+
+.value-card:hover{
+    transform: translateY(-8px);
+}
+
+.value-card h3{
+    font-size: 24px;
+    color: #5D4037;
+    margin-bottom: 15px;
+}
+
+.value-card p{
+    color: #555;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* CALL TO ACTION */
+
+.cta-section{
+    background: linear-gradient(135deg, #5D4037, #7B5E57);
+    color: white;
+    text-align: center;
+    padding: 80px 10%;
+}
+
+.cta-section h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.cta-section p{
+    max-width: 700px;
+    margin: 0 auto 35px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.cta-btn{
+    display: inline-block;
+    text-decoration: none;
+    background: #D4AF37;
+    color: #5D4037;
+    padding: 15px 35px;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.cta-btn:hover{
+    background: white;
+    transform: translateY(-5px);
+}
+/* Footer Section */
+
+.footer{
+    background: #333333;
+    color: white;
+    padding: 60px 8% 20px;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 40px;
+}
+
+.footer h2{
+    color: #D4AF37;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.footer h3{
+    margin-bottom: 20px;
+    color: #D4AF37;
+    font-family: 'Playfair Display', serif;
+}
+
+.footer p{
+    color: #ddd;
+    line-height: 1.7;
+}
+
+.footer-links a,
+.footer-social a{
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover,
+.footer-social a:hover{
+    color: #D4AF37;
+}
+
+.footer-bottom{
+    text-align: center;
+    border-top: 1px solid #555;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+@media(max-width:900px){
+
+    .footer-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .footer-container{
+        grid-template-columns: 1fr;
+    }
+
+}
+.active{
+    color: #D4AF37 !important;
+    font-weight: 600;
+}
+</style>
+<script>
+let username = localStorage.getItem("username");
+
+if (username) {
+    document.getElementById("loginBtn").innerHTML = "👤 " + username;
+    document.getElementById("loginBtn").href = "#";
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Mourna Stay</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html" class="active">About</a></li>
+
+<li><a href="rooms.html">Rooms</a></li>
+
+<li><a href="services.html">Services</a></li>
+
+<li><a href="dining.html">Dining</a></li>
+
+<li><a href="gallery.html">Gallery</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="login.html">Login / Join</a></li>
+
+</ul>
+
+</nav>
+
+<a href="booking.html" class="book-btn">Book Now</a>
+
+</header>
+
+<section class="about-hero">
+
+    <div class="hero-content">
+
+        <h1>About Mourna Stay</h1>
+
+        <p>
+            Discover the story behind our commitment to luxury,
+            comfort, and unforgettable hospitality.
+        </p>
+
+        <a href="booking.html" class="hero-btn">
+            Book Your Stay
+        </a>
+
+    </div>
+
+</section>
+
+<section class="story-section">
+
+    <div class="story-container">
+
+        <div class="story-image">
+            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=900&q=80" alt="Luxury Hotel">
+        </div>
+
+        <div class="story-content">
+
+            <h2>Our Story</h2>
+
+            <p>
+                Mourna Stay was founded with a vision to create a destination
+                where luxury meets comfort. Inspired by timeless elegance and
+                warm hospitality, our hotel offers a peaceful retreat for
+                families, couples, and business travelers alike.
+            </p>
+
+            <p>
+                Every room, every meal, and every guest experience is carefully
+                designed to ensure unforgettable memories. From beautifully
+                crafted interiors to personalized services, we believe every
+                stay should feel special.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="mission-section">
+
+    <div class="mission-container">
+
+        <div class="mission-content">
+
+            <h2>Our Mission</h2>
+
+            <p>
+                At Mourna Stay, our mission is to provide exceptional
+                hospitality through luxurious accommodations, personalized
+                service, and unforgettable experiences. We strive to create
+                a welcoming environment where every guest feels valued,
+                relaxed, and at home.
+            </p>
+
+            <p>
+                By combining modern comforts with timeless elegance, we aim
+                to exceed expectations and make every visit a memorable one.
+            </p>
+
+        </div>
+
+        <div class="mission-image">
+
+            <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=900&q=80" alt="Hotel Hospitality">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="values-section">
+
+    <h2>Our Values</h2>
+
+    <div class="values-container">
+
+        <div class="value-card">
+            <h3>❤️ Hospitality</h3>
+            <p>We welcome every guest with warmth, care, and personalized service.</p>
+        </div>
+
+        <div class="value-card">
+            <h3>⭐ Excellence</h3>
+            <p>We strive to deliver exceptional comfort and memorable experiences.</p>
+        </div>
+
+        <div class="value-card">
+            <h3>🌿 Sustainability</h3>
+            <p>We embrace eco-friendly practices to preserve nature for future generations.</p>
+        </div>
+
+        <div class="value-card">
+            <h3>🤝 Integrity</h3>
+            <p>We build trust through honesty, professionalism, and genuine hospitality.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="cta-section">
+
+    <h2>Ready to Experience Mourna Stay?</h2>
+
+    <p>
+        Book your stay today and indulge in luxury, comfort,
+        and unforgettable hospitality. We can't wait to welcome you.
+    </p>
+
+    <a href="booking.html" class="cta-btn">Book Now</a>
+
+</section>
+
+<!-- Footer Section -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+
+            <h2>Mourna Stay</h2>
+
+            <p>
+                Where luxury meets serenity. Experience premium hospitality,
+                comfort and unforgettable moments with us.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="dining.html">Dining</a>
+            <a href="services.html">Services</a>
+
+        </div>
+
+        <div class="footer-contact">
+
+            <h3>Contact</h3>
+
+            <p>📍 New Delhi, India</p>
+            <p>📞 +91 98765 43210</p>
+            <p>✉️ contact@mournastay.com</p>
+
+        </div>
+
+        <div class="footer-social">
+
+            <h3>Follow Us</h3>
+
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Mourna Stay. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+</body>
+
+</html>

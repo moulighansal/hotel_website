@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mourna Stay | Services</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+/* ---------- GENERAL ---------- */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#FAF9F6;
+color:#333333;
+overflow-x:hidden;
+}
+
+/* ---------- NAVBAR ---------- */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(93,64,55,.75);
+backdrop-filter:blur(8px);
+z-index:999;
+}
+
+.logo{
+font-family:'Playfair Display',serif;
+font-size:34px;
+font-weight:bold;
+color:#D4AF37;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:35px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:16px;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#D4AF37;
+}
+
+.book-btn{
+background:#D4AF37;
+padding:12px 28px;
+border-radius:40px;
+color:#5D4037;
+text-decoration:none;
+font-weight:600;
+transition:.4s;
+}
+
+.book-btn:hover{
+background:white;
+}
+/* SERVICES HERO */
+
+.services-hero{
+
+height:90vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+color:white;
+
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+.services-hero .hero-content{
+
+max-width:750px;
+
+padding:20px;
+
+}
+
+.services-hero h1{
+
+font-family:'Playfair Display',serif;
+
+font-size:68px;
+
+margin-bottom:20px;
+
+}
+
+.services-hero p{
+
+font-size:20px;
+
+line-height:1.8;
+
+margin-bottom:35px;
+
+}
+
+.hero-btn{
+
+display:inline-block;
+
+padding:15px 35px;
+
+background:#D4AF37;
+
+color:#5D4037;
+
+text-decoration:none;
+
+border-radius:40px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.hero-btn:hover{
+
+background:white;
+
+transform:translateY(-5px);
+
+}
+/* SERVICE SECTION */
+
+.service-section{
+    padding:90px 10%;
+    background:#FAF9F6;
+}
+
+.service-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.service-image{
+    flex:1;
+}
+
+.service-image img{
+    width:100%;
+    border-radius:18px;
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.service-image img:hover{
+    transform:scale(1.03);
+}
+
+.service-content{
+    flex:1;
+}
+
+.service-content h2{
+    font-family:'Playfair Display',serif;
+    font-size:42px;
+    color:#5D4037;
+    margin-bottom:25px;
+}
+
+.service-content p{
+    font-size:17px;
+    color:#555;
+    line-height:1.9;
+    margin-bottom:25px;
+}
+
+.service-features{
+    list-style:none;
+    padding:0;
+    margin-bottom:35px;
+}
+
+.service-features li{
+    font-size:17px;
+    color:#444;
+    margin-bottom:12px;
+}
+
+.service-btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#D4AF37;
+    color:#5D4037;
+    text-decoration:none;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.service-btn:hover{
+    background:#5D4037;
+    color:white;
+}
+/* Responsive Design */
+
+@media (max-width: 768px){
+
+    .service-container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .service-content h2{
+        font-size: 34px;
+    }
+
+    .service-content p,
+    .service-features li{
+        font-size: 16px;
+    }
+ .service-container.reverse{
+    flex-direction: column;
+}
+.service-container.reverse{
+    flex-direction: column;
+}
+
+}
+   .service-container.reverse{
+    flex-direction: row-reverse;
+}
+.service-container.reverse{
+    flex-direction: row-reverse;
+}
+/* EXPERIENCE SECTION */
+
+.experience-section{
+    padding: 80px 10%;
+    text-align: center;
+    background: #FAF9F6;
+}
+
+.experience-section h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: #5D4037;
+    margin-bottom: 20px;
+}
+
+.experience-section p{
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.9;
+}
+/* CALL TO ACTION */
+
+.cta-section{
+    background: linear-gradient(135deg, #5D4037, #7B5E57);
+    color: white;
+    text-align: center;
+    padding: 80px 10%;
+}
+
+.cta-section h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.cta-section p{
+    max-width: 700px;
+    margin: 0 auto 35px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.cta-btn{
+    display: inline-block;
+    text-decoration: none;
+    background: #D4AF37;
+    color: #5D4037;
+    padding: 15px 35px;
+    border-radius: 40px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.cta-btn:hover{
+    background: white;
+    transform: translateY(-5px);
+}
+/* Footer Section */
+
+.footer{
+    background: #333333;
+    color: white;
+    padding: 60px 8% 20px;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 40px;
+}
+
+.footer h2{
+    color: #D4AF37;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.footer h3{
+    margin-bottom: 20px;
+    color: #D4AF37;
+    font-family: 'Playfair Display', serif;
+}
+
+.footer p{
+    color: #ddd;
+    line-height: 1.7;
+}
+
+.footer-links a,
+.footer-social a{
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover,
+.footer-social a:hover{
+    color: #D4AF37;
+}
+
+.footer-bottom{
+    text-align: center;
+    border-top: 1px solid #555;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+.active{
+    color: #D4AF37 !important;
+    font-weight: 600;
+}
+    </style>
+
+</head>
+
+<body>
+<header>    
+
+   <div class="logo">Mourna Stay</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="rooms.html">Rooms</a></li>
+
+<li><a href="services.html">Services</a></li>
+
+<li><a href="dining.html">Dining</a></li>
+
+<li><a href="gallery.html">Gallery</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="login.html">Login / Join</a></li>
+
+</ul>
+
+</nav>
+
+<a href="booking.html" class="book-btn">Book Now</a>
+
+</header>
+
+    <section class="services-hero">
+
+    <div class="hero-content">
+
+        <h1>Exceptional Services</h1>
+
+        <p>
+            Discover world-class amenities designed to make your stay
+            comfortable, luxurious, and truly unforgettable.
+        </p>
+
+        <a href="booking.html" class="hero-btn">
+            Book Your Stay
+        </a>
+
+    </div>
+
+</section>
+
+    <section class="service-section">
+
+    <div class="service-container">
+
+        <div class="service-image">
+
+            <img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=900&q=80" alt="Swimming Pool">
+
+        </div>
+
+        <div class="service-content">
+
+            <h2>Swimming Pool</h2>
+
+            <p>
+                Escape into relaxation at our elegant temperature-controlled
+                swimming pool. Whether you prefer a refreshing morning swim
+                or a peaceful evening by the water, our pool offers the
+                perfect setting for leisure and rejuvenation.
+            </p>
+
+            <ul class="service-features">
+                <li>✓ Temperature-Controlled Pool</li>
+                <li>✓ Comfortable Poolside Lounge</li>
+                <li>✓ Open Daily: 7:00 AM – 10:00 PM</li>
+            </ul>
+
+            <a href="booking.html" class="service-btn">
+                Book Your Stay
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="service-section">
+
+    <div class="service-container">
+
+        <div class="service-content">
+
+            <h2>Fitness Center</h2>
+
+            <p>
+                Stay active during your stay with our state-of-the-art fitness
+                center. Equipped with modern machines and a spacious workout
+                area, our gym is designed to help you maintain your fitness
+                routine while enjoying a luxurious experience.
+            </p>
+
+            <ul class="service-features">
+                <li>✓ Modern Cardio & Strength Equipment</li>
+                <li>✓ Dedicated Yoga & Stretching Zone</li>
+                <li>✓ Open Daily: 6:00 AM – 11:00 PM</li>
+            </ul>
+
+            <a href="booking.html" class="service-btn">
+                Book Your Stay
+            </a>
+
+        </div>
+
+        <div class="service-image">
+
+            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=900&q=80" alt="Fitness Center">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="service-section">
+
+    <div class="service-container">
+
+        <div class="service-image">
+
+            <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=900&q=80" alt="Lounge and Bar">
+
+        </div>
+
+        <div class="service-content">
+
+            <h2>Lounge & Bar</h2>
+
+            <p>
+                Unwind in our elegant lounge and bar, where sophisticated
+                interiors meet a relaxing atmosphere. Enjoy handcrafted
+                beverages, delicious snacks, and a cozy setting perfect for
+                spending quality time with friends, family, or colleagues.
+            </p>
+
+            <ul class="service-features">
+                <li>✓ Signature Mocktails & Beverages</li>
+                <li>✓ Comfortable Indoor Lounge Seating</li>
+                <li>✓ Live Music on Weekends</li>
+            </ul>
+
+            <a href="booking.html" class="service-btn">
+                Book Your Stay
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="service-section">
+
+    <div class="service-container">
+
+        <div class="service-content">
+
+            <h2>Kids Play Area</h2>
+
+            <p>
+                Let your little ones enjoy endless fun in our safe and vibrant
+                Kids Play Area. Designed with families in mind, this space offers
+                exciting activities, colorful play equipment, and a secure
+                environment where children can laugh, learn, and make wonderful
+                memories.
+            </p>
+
+            <ul class="service-features">
+                <li>✓ Indoor Games & Play Equipment</li>
+                <li>✓ Safe & Child-Friendly Environment</li>
+                <li>✓ Open Daily: 8:00 AM – 9:00 PM</li>
+            </ul>
+
+            <a href="booking.html" class="service-btn">
+                Book Your Stay
+            </a>
+
+        </div>
+
+        <div class="service-image">
+
+            <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=900&q=80" alt="Kids Play Area">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="service-section">
+
+    <div class="service-container">
+
+        <div class="service-image">
+
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80" alt="Spa & Wellness">
+
+        </div>
+
+        <div class="service-content">
+
+            <h2>Spa & Wellness</h2>
+
+            <p>
+                Escape the stresses of everyday life and indulge in complete
+                relaxation at our Spa & Wellness Center. Enjoy rejuvenating
+                therapies, soothing massages, and a peaceful atmosphere
+                designed to refresh your mind, body, and soul.
+            </p>
+
+            <ul class="service-features">
+                <li>✓ Professional Spa & Massage Treatments</li>
+                <li>✓ Steam & Relaxation Rooms</li>
+                <li>✓ Open Daily: 9:00 AM – 8:00 PM</li>
+            </ul>
+
+            <a href="booking.html" class="service-btn">
+                Book Your Stay
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="experience-section">
+
+    <h2>Experience Comfort Beyond Expectations</h2>
+
+    <p>
+        At Mourna Stay, every service is thoughtfully designed to provide
+        comfort, relaxation, and unforgettable moments. Whether you're here
+        for leisure, family vacations, or business, we ensure every stay is
+        filled with luxury and exceptional hospitality.
+    </p>
+
+</section>
+
+<section class="cta-section">
+
+    <h2>Ready to Experience Mourna Stay?</h2>
+
+    <p>
+        Book your stay today and enjoy luxury accommodation,
+        premium amenities, and unforgettable hospitality.
+    </p>
+
+    <a href="booking.html" class="cta-btn">
+        Book Now
+    </a>
+
+</section>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+
+            <h2>Mourna Stay</h2>
+
+            <p>
+                Where luxury meets serenity. Experience premium hospitality,
+                comfort and unforgettable moments with us.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="dining.html">Dining</a>
+            <a href="services.html">Services</a>
+
+        </div>
+
+        <div class="footer-contact">
+
+            <h3>Contact</h3>
+
+            <p>📍 New Delhi, India</p>
+            <p>📞 +91 98765 43210</p>
+            <p>✉️ contact@mournastay.com</p>
+
+        </div>
+
+        <div class="footer-social">
+
+            <h3>Follow Us</h3>
+
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Mourna Stay. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+<script>
+let username = localStorage.getItem("username");
+
+if(username){
+    document.getElementById("loginBtn").innerHTML = "👤 " + username;
+    document.getElementById("loginBtn").href = "#";
+}
+</script>
+</body>
+
+</html>
