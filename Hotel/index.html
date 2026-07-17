@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ananta Stay | Where Luxury Meets Serenity</title>
+<title>Mourna Stay | Where Luxury Meets Serenity</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -242,7 +242,7 @@ font-size:24px;
 </head>
 <body>
 <header>
-<div class="logo">Ananta Stay</div>
+<div class="logo">Mourna Stay</div>
 
 <nav>
 <ul>
@@ -252,19 +252,18 @@ font-size:24px;
 <li><a href="services.html">Services</a></li>
 <li><a href="dining.html">Dining</a></li>
 <li><a href="gallery.html">Gallery</a></li>
-<li><a href="attractions.html">Attractions</a></li>
 <li><a href="contact.html">Contact</a></li>
-<li><a id="profileLink" href="login.html" id="loginBtn">login/Join</a></li>
+<li><a id="loginBtn" href="login.html">login / Join</a></li>
 </ul>
 
 </nav>
-<a href="#" class="book-btn">Book Now</a>
+<a href="booking.html" class="book-btn">Book Now</a>
 </header>
 <section class="hero">
 
 <div class="hero-content">
 <h3>WELCOME TO</h3>
-<h1>Ananta Stay</h1>
+<h1>Mourna Stay</h1>
 <h2>Where Luxury Meets Serenity</h2>
 
 <p>
@@ -288,16 +287,16 @@ and unforgettable moments crafted especially for you.
 
         <div class="about-image">
             <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945" 
-            alt="Ananta Stay Luxury Hotel">
+            alt="Mourna Stay Luxury Hotel">
         </div>
 
         <div class="about-content">
 
-            <h2>Welcome to Ananta Stay</h2>
+            <h2>Welcome to Mourna Stay</h2>
 
             <p>
                 Experience the perfect combination of luxury, comfort, and 
-                peaceful hospitality. Ananta Stay is designed to provide 
+                peaceful hospitality. Mourna Stay is designed to provide 
                 our guests with a memorable and relaxing experience.
             </p>
 
@@ -639,7 +638,7 @@ and unforgettable moments crafted especially for you.
 
         <div class="why-content">
 
-            <h2>Why Choose Ananta Stay?</h2>
+            <h2>Why Choose Mourna Stay?</h2>
 
             <p>
                 We create unforgettable experiences by combining luxury,
@@ -778,7 +777,7 @@ and unforgettable moments crafted especially for you.
         <div class="testimonial-card">
 
             <p>
-                "Ananta Stay provided an amazing experience. 
+                "Mourna Stay provided an amazing experience. 
                 The rooms were luxurious and the service was excellent."
             </p>
 
@@ -877,10 +876,9 @@ and unforgettable moments crafted especially for you.
 
     <div class="footer-container">
 
-
         <div class="footer-about">
 
-            <h2>Ananta Stay</h2>
+            <h2>Mourna Stay</h2>
 
             <p>
                 Where luxury meets serenity. Experience premium hospitality,
@@ -889,20 +887,17 @@ and unforgettable moments crafted especially for you.
 
         </div>
 
-
-
         <div class="footer-links">
 
             <h3>Quick Links</h3>
 
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#rooms">Rooms</a>
-            <a href="#gallery">Gallery</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="dining.html">Dining</a>
+            <a href="services.html">Services</a>
 
         </div>
-
-
 
         <div class="footer-contact">
 
@@ -910,118 +905,122 @@ and unforgettable moments crafted especially for you.
 
             <p>📍 New Delhi, India</p>
             <p>📞 +91 98765 43210</p>
-            <p>✉️ contact@anantastay.com</p>
+            <p>✉️ contact@mournastay.com</p>
 
         </div>
-
-
 
         <div class="footer-social">
 
             <h3>Follow Us</h3>
 
-            <p>Instagram</p>
-            <p>Facebook</p>
-            <p>Twitter</p>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
 
         </div>
 
-
     </div>
-
 
     <div class="footer-bottom">
 
         <p>
-            © 2026 Ananta Stay. All Rights Reserved.
+            © 2026 Mourna Stay. All Rights Reserved.
         </p>
 
     </div>
 
-
 </footer>
 
 <style>
-    /* Footer Section */
+/* Footer Section */
 
-.footer {
+.footer{
     background: #333333;
     color: white;
     padding: 60px 8% 20px;
 }
 
-
-.footer-container {
+.footer-container{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 40px;
 }
 
-
-.footer h2 {
+.footer h2{
     color: #D4AF37;
     margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
 }
 
-
-.footer h3 {
+.footer h3{
     margin-bottom: 20px;
     color: #D4AF37;
+    font-family: 'Playfair Display', serif;
 }
 
-
-.footer p {
+.footer p{
     color: #ddd;
     line-height: 1.7;
 }
 
-
-.footer-links a {
+.footer-links a,
+.footer-social a{
     display: block;
     color: #ddd;
     text-decoration: none;
     margin-bottom: 10px;
+    transition: 0.3s;
 }
 
-
-.footer-links a:hover {
+.footer-links a:hover,
+.footer-social a:hover{
     color: #D4AF37;
 }
 
-
-.footer-bottom {
+.footer-bottom{
     text-align: center;
     border-top: 1px solid #555;
     margin-top: 40px;
     padding-top: 20px;
 }
 
-
 @media(max-width:900px){
 
-    .footer-container {
+    .footer-container{
         grid-template-columns: repeat(2,1fr);
     }
 
 }
 
-
 @media(max-width:600px){
 
-    .footer-container {
+    .footer-container{
         grid-template-columns: 1fr;
     }
 
 }
 </style>
-
 <script>
 
 let username = localStorage.getItem("username");
+
+let loginBtn = document.getElementById("loginBtn");
+
+
 if(username){
-document.getElementById("loginBtn").innerHTML =
-"👤 " + username;
-document.getElementById("loginBtn").href =
-"#";
+
+    loginBtn.innerHTML = "👤 " + username;
+
+    loginBtn.href = "profile.html";
+
 }
+else{
+
+    loginBtn.innerHTML = "Login / Join";
+
+    loginBtn.href = "login.html";
+
+}
+
 </script>
+

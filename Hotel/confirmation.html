@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Confirmed | Mourna Stay</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family:Poppins,sans-serif;
+    background:#FAF9F6;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
+
+.card{
+    width:500px;
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+h1{
+    color:#5D4037;
+    text-align:center;
+}
+
+.success{
+    text-align:center;
+    font-size:70px;
+}
+
+.details{
+    margin-top:25px;
+    line-height:2;
+}
+
+.details p{
+    border-bottom:1px solid #eee;
+    padding:8px 0;
+}
+
+button{
+    width:100%;
+    margin-top:30px;
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    background:#D4AF37;
+    color:#5D4037;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#5D4037;
+    color:white;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="success">✅</div>
+
+<h1>Your Booking is Confirmed!</h1>
+
+<div class="details">
+
+<p><b>Name:</b> <span id="name"></span></p>
+
+<p><b>Room:</b> <span id="room"></span></p>
+
+<p><b>Check-in:</b> <span id="checkin"></span></p>
+
+<p><b>Check-out:</b> <span id="checkout"></span></p>
+
+<p><b>Adults:</b> <span id="adults"></span></p>
+
+<p><b>Children:</b> <span id="children"></span></p>
+
+</div>
+
+<button onclick="window.location.href='index.html'">
+Back to Home
+</button>
+
+</div>
+
+<script>
+
+document.getElementById("name").innerHTML =
+localStorage.getItem("guestName");
+
+document.getElementById("room").innerHTML =
+localStorage.getItem("room");
+
+document.getElementById("checkin").innerHTML =
+localStorage.getItem("checkin");
+
+document.getElementById("checkout").innerHTML =
+localStorage.getItem("checkout");
+
+document.getElementById("adults").innerHTML =
+localStorage.getItem("adults");
+
+document.getElementById("children").innerHTML =
+localStorage.getItem("children");
+
+</script>
+
+</body>
+</html>

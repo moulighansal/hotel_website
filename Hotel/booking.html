@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Booking | Mourna Stay</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+
+body{
+
+    background:#FAF9F6;
+    padding:40px 8%;
+
+}
+
+
+.booking-container{
+
+    max-width:1100px;
+    margin:auto;
+    background:white;
+    border-radius:20px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.1);
+    padding:40px;
+
+}
+
+
+h1{
+
+    text-align:center;
+    font-family:'Playfair Display',serif;
+    color:#5D4037;
+    margin-bottom:40px;
+
+}
+
+
+
+.booking-content{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:40px;
+
+}
+
+
+
+/* Left Side */
+
+.room-summary img{
+
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:15px;
+
+}
+
+
+.room-summary h2{
+
+    color:#5D4037;
+    margin:20px 0 10px;
+
+}
+
+
+.room-summary p{
+
+    color:#555;
+    line-height:1.7;
+
+}
+
+
+.price{
+
+    color:#D4AF37;
+    font-size:22px;
+    font-weight:bold;
+
+}
+
+
+
+/* Form */
+
+.form-group{
+
+    margin-bottom:20px;
+
+}
+
+
+label{
+
+    display:block;
+    margin-bottom:8px;
+    color:#5D4037;
+    font-weight:500;
+
+}
+
+
+input, select{
+
+    width:100%;
+    padding:13px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+
+}
+
+
+.row{
+
+    display:flex;
+    gap:20px;
+
+}
+
+
+.row .form-group{
+
+    width:50%;
+
+}
+
+
+
+button{
+
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:30px;
+    background:#D4AF37;
+    color:#5D4037;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+
+}
+
+
+button:hover{
+
+    background:#5D4037;
+    color:white;
+
+}
+
+
+
+@media(max-width:768px){
+
+    .booking-content{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .row{
+
+        flex-direction:column;
+
+    }
+
+
+    .row .form-group{
+
+        width:100%;
+
+    }
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<div class="booking-container">
+
+
+<h1>Complete Your Booking</h1>
+
+
+<div class="booking-content">
+
+
+
+<!-- Room Details -->
+
+<div class="room-summary">
+
+
+<img id="roomImage" src="https://images.unsplash.com/photo-1618773928121-c32242e63f39">
+
+
+<h2 id="roomTitle">Deluxe Room</h2>
+
+
+<p id="roomDescription">
+Experience luxury and comfort with elegant interiors,
+modern facilities and premium hospitality.
+</p>
+
+
+<div class="price" id="roomPrice">
+₹5000 / Night
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- Booking Form -->
+
+<div class="booking-form">
+
+
+<div class="row">
+
+<div class="form-group">
+
+<label>Check-in Date</label>
+
+<input type="date" id="checkin">
+
+</div>
+
+
+<div class="form-group">
+
+<label>Check-out Date</label>
+
+<input type="date" id="checkout">
+
+</div>
+
+</div>
+
+
+
+
+<div class="form-group">
+
+<label>Room Type</label>
+
+<select id="roomSelect" onchange="changeRoom(this.value)">
+
+<option value="deluxe">Deluxe Room - ₹5000/night</option>
+
+<option value="premium">Premium Suite - ₹8000/night</option>
+
+<option value="royal">Royal Suite - ₹12000/night</option>
+
+</select>
+
+</div>
+
+
+
+
+<div class="row">
+
+
+<div class="form-group">
+
+<label>Adults</label>
+
+<select id="adults">
+
+<option>1</option>
+<option>2</option>
+
+</select>
+
+</div>
+
+
+
+<div class="form-group">
+
+<label>Children</label>
+
+<select id="children">
+
+<option>0</option>
+<option>1</option>
+<option>2</option>
+
+</select>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="form-group">
+
+<label>Full Name</label>
+
+<input type="text" id="guestName" placeholder="Enter your name">
+
+</div>
+
+
+
+
+<div class="form-group">
+
+<label>Email / Mobile Number</label>
+
+<input type="text" placeholder="Enter email or mobile number">
+
+</div>
+
+
+
+
+<button type="button" onclick="confirmBooking()">
+Confirm Booking
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+<script>
+
+function changeRoom(room){
+
+let image=document.getElementById("roomImage");
+let title=document.getElementById("roomTitle");
+let description=document.getElementById("roomDescription");
+let price=document.getElementById("roomPrice");
+
+
+if(room=="deluxe"){
+
+image.src="https://images.unsplash.com/photo-1618773928121-c32242e63f39";
+
+title.innerHTML="Deluxe Room";
+
+description.innerHTML="Experience luxury and comfort with elegant interiors, modern facilities and premium hospitality.";
+
+price.innerHTML="₹5000 / Night";
+
+}
+
+
+else if(room=="premium"){
+
+image.src="https://images.unsplash.com/photo-1590490360182-c33d57733427";
+
+title.innerHTML="Premium Suite";
+
+description.innerHTML="Spacious suite with premium facilities, luxury interiors and relaxing ambience.";
+
+price.innerHTML="₹8000 / Night";
+
+}
+
+
+else{
+
+image.src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b";
+
+title.innerHTML="Royal Suite";
+
+description.innerHTML="Experience royal luxury with exclusive services, elegant décor and world-class comfort.";
+
+price.innerHTML="₹12000 / Night";
+
+}
+}
+function confirmBooking(){
+
+    localStorage.setItem("guestName",
+    document.getElementById("guestName").value);
+
+    localStorage.setItem("room",
+    document.getElementById("roomSelect").options[document.getElementById("roomSelect").selectedIndex].text);
+
+    localStorage.setItem("checkin",
+    document.getElementById("checkin").value);
+
+    localStorage.setItem("checkout",
+    document.getElementById("checkout").value);
+
+    localStorage.setItem("adults",
+    document.getElementById("adults").value);
+
+    localStorage.setItem("children",
+    document.getElementById("children").value);
+
+    window.location.href="confirmation.html";
+
+}
+
+
+</script>
+</body>
+
+</html>

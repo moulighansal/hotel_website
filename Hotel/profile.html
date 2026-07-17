@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Profile | Mourna Stay</title>
+
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Poppins, sans-serif;
+}
+
+
+body{
+
+    background:#FAF9F6;
+    padding:40px 8%;
+
+}
+
+
+/* Profile Header */
+
+.profile-header{
+
+    background:#5D4037;
+    color:white;
+    padding:35px;
+    border-radius:20px;
+    margin-bottom:30px;
+
+}
+
+
+.profile-header h1{
+
+    font-size:35px;
+    margin-bottom:10px;
+
+}
+
+
+.profile-header p{
+
+    font-size:17px;
+
+}
+
+
+
+/* Main Layout */
+
+.profile-container{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+
+}
+
+
+
+/* Cards */
+
+.card{
+
+    background:white;
+    padding:30px;
+    border-radius:18px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+
+}
+
+
+.card h2{
+
+    color:#5D4037;
+    margin-bottom:20px;
+
+}
+
+
+/* Information */
+
+.info{
+
+    display:flex;
+    justify-content:space-between;
+    padding:15px 0;
+    border-bottom:1px solid #eee;
+
+}
+
+
+.info span:first-child{
+
+    color:#777;
+
+}
+
+
+.info span:last-child{
+
+    font-weight:600;
+
+}
+
+
+
+/* Benefits */
+
+ul{
+
+    list-style:none;
+
+}
+
+
+li{
+
+    margin:15px 0;
+    color:#444;
+
+}
+
+
+
+/* Buttons */
+
+.buttons{
+
+    margin-top:25px;
+
+}
+
+
+button{
+
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    margin-right:10px;
+    font-size:15px;
+
+}
+
+
+.booking{
+
+    background:#D4AF37;
+    color:white;
+
+}
+
+
+.logout{
+
+    background:#5D4037;
+    color:white;
+
+}
+
+
+
+@media(max-width:768px){
+
+    .profile-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+<div class="profile-header">
+
+<h1>
+Welcome, <span id="userName"></span> 👋
+</h1>
+
+<p>
+Thank you for being a valued member of Mourna Stay
+</p>
+
+</div>
+
+
+
+
+<div class="profile-container">
+
+
+
+<div class="card">
+
+<h2>Profile Information</h2>
+
+
+<div class="info">
+
+<span>Name</span>
+<span id="profileName"></span>
+
+</div>
+
+
+<div class="info">
+
+<span>Email / Mobile</span>
+<span>Not Added</span>
+
+</div>
+
+
+<div class="info">
+
+<span>Membership</span>
+<span>Premium Member</span>
+
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+<h2>Member Benefits</h2>
+
+
+<ul>
+
+<li>✨ Exclusive room discounts</li>
+
+<li>✨ Priority booking access</li>
+
+<li>✨ Special offers</li>
+
+<li>✨ Personalized services</li>
+
+
+</ul>
+
+
+<div class="buttons">
+
+<button class="booking">
+My Bookings
+</button>
+
+
+<button class="logout" onclick="logoutUser()">
+Logout
+</button>
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+let name = localStorage.getItem("username");
+
+
+if(name){
+
+document.getElementById("userName").innerHTML = name;
+
+document.getElementById("profileName").innerHTML = name;
+
+}
+
+function logoutUser(){
+    localStorage.removeItem("Username");
+    window.location.href="index.html";
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>

@@ -5,7 +5,7 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login | Ananta Stay</title>
+<title>Login | Mourna Stay</title>
 
 
 <style>
@@ -207,7 +207,7 @@ button{
 
 
 <p>
-Become a member of Ananta Stay and enjoy exclusive privileges,
+Become a member of Mourna Stay and enjoy exclusive privileges,
 personalised services and special offers.
 </p>
 
@@ -243,71 +243,38 @@ personalised services and special offers.
 
 
 <div class="login-box">
-
-
 <h2>Already a Member?</h2>
-
 <p>Login to continue your journey with us</p>
 
+<form onsubmit="return false;">
 
+<input type="text" id="email" placeholder="Email ID or Mobile Number">
 
-<form>
+<input type="password" id="password" placeholder="Password">
 
-
-<input type="text" placeholder="Email ID or Mobile Number">
-<input type="password" placeholder="Password">
 <input type="text" id="name" placeholder="Enter Your Name">
 
 
-
 <div class="checkbox">
+
 <input type="checkbox" id="terms">
+
 <label for="terms">
 I agree to Terms & Conditions and Privacy Policy
 </label>
 
 </div>
-<button onclick="loginUser()">
+
+
+<button type="button" onclick="loginUser()">
 Login
 </button>
-
 
 
 </form>
 
 
-
 </div>
-</div>
-
-<script>
-
-function loginUser(){
-
-    let user = document.querySelector("input[type='text']").value;
-
-    let password = document.querySelector("input[type='password']").value;
-
-
-    if(user !== "" && password !== ""){
-
-        localStorage.setItem("username", user);
-
-        alert("Login Successful!");
-
-        window.location.href="index.html";
-
-    }
-
-    else{
-
-        alert("Please enter details");
-
-    }
-
-}
-
-</script>
 
 
 <script>
@@ -315,25 +282,27 @@ function loginUser(){
 function loginUser(){
 
     let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
 
-    if(name !== ""){
+
+    if(name !== "" && email !== "" && password !== ""){
 
         localStorage.setItem("username", name);
-
-        alert("Login Successful!");
 
         window.location.href = "index.html";
 
     }
-
     else{
 
-        alert("Please enter your name");
+        alert("Please fill all details");
 
     }
 
 }
+
 </script>
+
 </body>
 
 </html>
