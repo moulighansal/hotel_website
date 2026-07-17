@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mourna Stay | Rooms & Suites</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ---------- GENERAL ---------- */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#FAF9F6;
+color:#333333;
+overflow-x:hidden;
+}
+
+/* ---------- NAVBAR ---------- */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(93,64,55,.75);
+backdrop-filter:blur(8px);
+z-index:999;
+}
+
+.logo{
+font-family:'Playfair Display',serif;
+font-size:34px;
+font-weight:bold;
+color:#D4AF37;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:35px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:16px;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#D4AF37;
+}
+
+.book-btn{
+background:#D4AF37;
+padding:12px 28px;
+border-radius:40px;
+color:#5D4037;
+text-decoration:none;
+font-weight:600;
+transition:.4s;
+}
+
+.book-btn:hover{
+background:white;
+}
+
+/* ---------- HERO ---------- */
+
+.rooms-hero{
+
+height:90vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+background:
+
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+
+url("https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+color:white;
+
+}
+
+.hero-content{
+
+max-width:750px;
+
+padding:20px;
+
+}
+
+.hero-content h1{
+
+font-family:'Playfair Display',serif;
+
+font-size:68px;
+
+margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+font-size:20px;
+
+line-height:1.8;
+
+margin-bottom:35px;
+
+}
+
+.hero-btn{
+
+display:inline-block;
+
+padding:15px 35px;
+
+background:#D4AF37;
+
+color:#5D4037;
+
+text-decoration:none;
+
+border-radius:40px;
+
+font-weight:bold;
+
+transition:.4s;
+
+}
+
+.hero-btn:hover{
+
+background:white;
+
+transform:translateY(-5px);
+
+}
+
+section{
+
+padding:90px 8%;
+
+}
+
+@media(max-width:768px){
+
+header{
+
+flex-direction:column;
+
+}
+
+nav ul{
+
+margin-top:20px;
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+nav ul li{
+
+margin:10px;
+
+}
+
+.hero-content h1{
+
+font-size:45px;
+
+}
+
+.hero-content p{
+
+font-size:17px;
+
+}
+
+}
+/* ---------- ROOMS SECTION ---------- */
+
+.rooms-section{
+
+padding:90px 8%;
+
+background:#FAF9F6;
+
+}
+
+.section-heading{
+
+text-align:center;
+
+margin-bottom:70px;
+
+}
+
+.section-heading h2{
+
+font-family:'Playfair Display',serif;
+
+font-size:52px;
+
+color:#5D4037;
+
+margin-bottom:15px;
+
+}
+
+.section-heading p{
+
+max-width:700px;
+
+margin:auto;
+
+font-size:18px;
+
+line-height:1.8;
+
+color:#555;
+
+}
+/* ---------- ROOM BOX ---------- */
+
+.room-box{
+
+display:flex;
+
+align-items:center;
+
+gap:60px;
+
+margin-bottom:90px;
+
+}
+
+.room-image{
+
+flex:1;
+
+}
+
+.room-image img{
+
+width:100%;
+
+height:420px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+box-shadow:0 12px 25px rgba(0,0,0,.15);
+
+transition:.4s;
+
+}
+
+.room-image img:hover{
+
+transform:scale(1.03);
+
+}
+
+.room-content{
+
+flex:1;
+
+}
+
+.room-content h2{
+
+font-family:'Playfair Display',serif;
+
+font-size:42px;
+
+color:#5D4037;
+
+margin-bottom:10px;
+
+}
+
+.tagline{
+
+color:#D4AF37;
+
+font-weight:600;
+
+margin-bottom:18px;
+
+font-size:18px;
+
+}
+
+.description{
+
+line-height:1.9;
+
+color:#555;
+
+margin-bottom:25px;
+
+}
+
+.amenities{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:15px;
+
+margin-bottom:30px;
+
+}
+
+.amenities span{
+
+background:white;
+
+padding:12px;
+
+border-radius:10px;
+
+box-shadow:0 4px 10px rgba(0,0,0,.08);
+
+font-size:15px;
+
+}
+
+.price{
+
+color:#D4AF37;
+
+font-size:30px;
+
+margin-bottom:25px;
+
+}
+
+.room-btn{
+
+display:inline-block;
+
+padding:14px 32px;
+
+background:#D4AF37;
+
+color:#5D4037;
+
+text-decoration:none;
+
+border-radius:40px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.room-btn:hover{
+
+background:#5D4037;
+
+color:white;
+
+}
+
+@media(max-width:900px){
+
+.room-box{
+
+flex-direction:column;
+
+}
+
+.room-box.reverse{
+
+flex-direction:column;
+
+}
+
+.room-image img{
+
+height:300px;
+
+}
+
+.amenities{
+
+grid-template-columns:1fr;
+
+}
+
+}
+.room-box {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 90px;
+}
+
+.room-box.reverse {
+    flex-direction: row-reverse;
+}
+/* Footer Section */
+
+.footer{
+    background: #333333;
+    color: white;
+    padding: 60px 8% 20px;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 40px;
+}
+
+.footer h2{
+    color: #D4AF37;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.footer h3{
+    margin-bottom: 20px;
+    color: #D4AF37;
+    font-family: 'Playfair Display', serif;
+}
+
+.footer p{
+    color: #ddd;
+    line-height: 1.7;
+}
+
+.footer-links a,
+.footer-social a{
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover,
+.footer-social a:hover{
+    color: #D4AF37;
+}
+
+.footer-bottom{
+    text-align: center;
+    border-top: 1px solid #555;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+@media(max-width:900px){
+
+    .footer-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .footer-container{
+        grid-template-columns: 1fr;
+    }
+
+}
+.active{
+    color: #D4AF37 !important;
+    font-weight: 600;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Mourna Stay</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="rooms.html" class="active">Rooms</a></li>
+
+<li><a href="services.html">Services</a></li>
+
+<li><a href="dining.html">Dining</a></li>
+
+<li><a href="gallery.html">Gallery</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="login.html">Login / Join</a></li>
+
+</ul>
+
+</nav>
+
+<a href="booking.html" class="book-btn">Book Now</a>
+
+</header>
+
+<section class="rooms-hero">
+
+<div class="hero-content">
+
+<h1>Luxury Rooms & Suites</h1>
+
+<p>
+
+Discover thoughtfully designed rooms that blend elegance,
+comfort, and premium hospitality. Whether you're travelling
+for business, leisure, or a family vacation, Mourna Stay
+offers the perfect space to relax and unwind.
+
+</p>
+
+<a href="#rooms" class="hero-btn">
+
+View Our Rooms
+
+</a>
+
+</div>
+
+</section>
+<section id="rooms" class="rooms-section">
+
+<div class="section-heading">
+
+<h2>Our Rooms & Suites</h2>
+
+<p>
+Choose from our thoughtfully designed rooms, each crafted to offer
+comfort, elegance, and a memorable stay.
+</p>
+
+</div>
+<div class="room-box">
+
+<div class="room-image">
+
+<img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80"
+alt="Deluxe Room">
+
+</div>
+
+<div class="room-content">
+
+<h2>Deluxe Room</h2>
+
+<p class="tagline">
+Perfect for people seeking comfort and elegance.
+</p>
+
+<p class="description">
+
+Experience a beautifully designed room featuring warm interiors,
+modern amenities, and a relaxing atmosphere. The Deluxe Room
+offers everything you need for a comfortable and memorable stay.
+
+</p>
+
+<div class="amenities">
+
+<span>🛜 Free WiFi</span>
+
+<span>❄️ Air Conditioning</span>
+
+<span>📺 Smart TV</span>
+
+<span>🍳 Complimentary Breakfast</span>
+
+<span>👨‍👩‍👧 upto 2 adults + 2 children</span>
+
+<span>🛏️ Queen Size Bed</span>
+
+</div>
+
+<h3 class="price">₹5,000 / Night</h3>
+
+<a href="booking.html" class="room-btn">
+            Book Now
+        </a>
+
+</div>
+
+</div>
+<div class="room-box">
+
+    <div class="room-content">
+
+        <h2>Premium Suite</h2>
+
+        <p class="tagline">
+            Experience unmatched comfort with our elegant Premium Suite.
+        </p>
+
+        <p class="description">
+            Indulge in a spacious suite featuring a separate living area, stylish interiors,
+            luxurious furnishings, and premium amenities designed to make every stay memorable.
+        </p>
+
+        <div class="amenities">
+
+            <span>🛜 Free WiFi</span>
+
+            <span>❄️ Air Conditioning</span>
+
+            <span>🛋️ Separate Living Area</span>
+
+            <span>🍽️ Complimentary Breakfast</span>
+
+            <span>👨‍👩‍👧‍👦 Up to 4 Adults + 3 Children</span>
+
+            <span>🛏️ King Size Bed</span>
+
+        </div>
+
+        <h3 class="price">₹8,500 / Night</h3>
+
+        <a href="booking.html" class="room-btn">
+            Book Now
+        </a>
+
+    </div>
+
+    <div class="room-image">
+
+        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80"
+             alt="Premium Suite">
+
+    </div>
+
+</div>
+<div class="room-box">
+
+    <div class="room-image">
+
+        <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1200&q=80"
+             alt="Royal Suite">
+
+    </div>
+
+    <div class="room-content">
+
+        <h2>Royal Suite</h2>
+
+        <p class="tagline">
+            The ultimate luxury experience with world-class comfort.
+        </p>
+
+        <p class="description">
+            Our Royal Suite offers unmatched elegance with a grand bedroom,
+            luxurious lounge area, premium décor, breathtaking views, and exclusive
+            amenities for an unforgettable stay.
+        </p>
+
+        <div class="amenities">
+
+            <span>🛜 Free WiFi</span>
+
+            <span>❄️ Air Conditioning</span>
+
+            <span>🛋️ Private Lounge</span>
+
+            <span>🍽️ Complimentary Breakfast</span>
+
+            <span>👨‍👩‍👧‍👦 Up to 4 Adults + 3 Children</span>
+
+            <span>🛏️ King Size Bed</span>
+
+        </div>
+
+        <h3 class="price">₹12,000 / Night</h3>
+
+        <a href="booking.html" class="room-btn">
+            Book Now
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+<!-- Footer Section -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+
+            <h2>Mourna Stay</h2>
+
+            <p>
+                Where luxury meets serenity. Experience premium hospitality,
+                comfort and unforgettable moments with us.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="dining.html">Dining</a>
+            <a href="services.html">Services</a>
+
+        </div>
+
+        <div class="footer-contact">
+
+            <h3>Contact</h3>
+
+            <p>📍 New Delhi, India</p>
+            <p>📞 +91 98765 43210</p>
+            <p>✉️ contact@mournastay.com</p>
+
+        </div>
+
+        <div class="footer-social">
+
+            <h3>Follow Us</h3>
+
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Mourna Stay. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+<script>
+let username = localStorage.getItem("username");
+
+if(username){
+    document.getElementById("loginBtn").innerHTML = "👤 " + username;
+    document.getElementById("loginBtn").href = "#";
+}
+</script>
+
+</body>
+
+</html>
