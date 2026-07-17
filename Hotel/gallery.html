@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery | Mourna Stay</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ---------- NAVBAR ---------- */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(93,64,55,.75);
+backdrop-filter:blur(8px);
+z-index:999;
+}
+
+.logo{
+font-family:'Playfair Display',serif;
+font-size:34px;
+font-weight:bold;
+color:#D4AF37;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+}
+
+nav ul li{
+margin-left:35px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-size:16px;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#D4AF37;
+}
+
+.book-btn{
+background:#D4AF37;
+padding:12px 28px;
+border-radius:40px;
+color:#5D4037;
+text-decoration:none;
+font-weight:600;
+transition:.4s;
+}
+
+.book-btn:hover{
+background:white;
+}
+/* ---------- GENERAL ---------- */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#FAF9F6;
+color:#333333;
+overflow-x:hidden;
+}
+
+
+/* ---------- ABOUT HERO ---------- */
+
+.about-hero{
+
+height:90vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+color:white;
+
+}
+
+.hero-content{
+
+max-width:760px;
+
+padding:20px;
+
+}
+
+.hero-content h1{
+
+font-family:'Playfair Display',serif;
+
+font-size:70px;
+
+margin-bottom:20px;
+
+}
+
+.hero-content p{
+
+font-size:20px;
+
+line-height:1.8;
+
+margin-bottom:35px;
+
+}
+
+.hero-btn{
+
+display:inline-block;
+
+padding:15px 35px;
+
+background:#D4AF37;
+
+color:#5D4037;
+
+text-decoration:none;
+
+border-radius:40px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.hero-btn:hover{
+
+background:white;
+
+transform:translateY(-5px);
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #FAF9F6;
+}
+
+/* ---------------- HERO ---------------- */
+
+.gallery-hero{
+    height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:750px;
+}
+
+.hero-content h1{
+    font-size:60px;
+    font-family:'Playfair Display',serif;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.hero-btn{
+    display:inline-block;
+    background:#D4AF37;
+    color:white;
+    padding:15px 35px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    background:#b89228;
+}
+
+/* ---------------- GALLERY ---------------- */
+
+.gallery-section{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.gallery-section h2{
+    font-size:42px;
+    color:#5D4037;
+    margin-bottom:15px;
+    font-family:'Playfair Display',serif;
+}
+
+.gallery-section p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:50px;
+    color:#666;
+    line-height:1.8;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.gallery-card{
+    overflow:hidden;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.gallery-card img{
+    height:300px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.gallery-card:hover{
+    transform:translateY(-8px);
+}
+
+.gallery-card:hover img{
+    transform:scale(1.08);
+}
+
+/* ---------------- CTA ---------------- */
+
+.cta-section{
+    background:#5D4037;
+    color:white;
+    text-align:center;
+    padding: 100px 10%;
+}
+
+.cta-section h2{
+    font-size:42px;
+    margin-bottom:20px;
+    font-family:'Playfair Display',serif;
+}
+
+.cta-section p{
+    max-width:700px;
+    margin:auto;
+    margin-bottom:35px;
+    line-height:1.8;
+}
+
+.cta-btn{
+    display:inline-block;
+    padding:15px 35px;
+    background:#D4AF37;
+    color:white;
+    border-radius:35px;
+    transition:.3s;
+}
+
+.cta-btn:hover{
+    background:#b89228;
+}
+
+/* Footer Section */
+
+.footer{
+    background: #333333;
+    color: white;
+    padding: 60px 8% 20px;
+}
+
+.footer-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 40px;
+}
+
+.footer h2{
+    color: #D4AF37;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+
+.footer h3{
+    margin-bottom: 20px;
+    color: #D4AF37;
+    font-family: 'Playfair Display', serif;
+}
+
+.footer p{
+    color: #ddd;
+    line-height: 1.7;
+}
+
+.footer-links a,
+.footer-social a{
+    display: block;
+    color: #ddd;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover,
+.footer-social a:hover{
+    color: #D4AF37;
+}
+
+.footer-bottom{
+    text-align: center;
+    border-top: 1px solid #555;
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+@media(max-width:900px){
+
+    .footer-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:600px){
+
+    .footer-container{
+        grid-template-columns: 1fr;
+    }
+
+}
+.active{
+    color: #D4AF37 !important;
+    font-weight: 600;
+}
+/* ---------------- RESPONSIVE ---------------- */
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero-content h1{
+    font-size:42px;
+}
+
+.gallery-section h2,
+.cta-section h2{
+    font-size:34px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Mourna Stay</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="about.html">About</a></li>
+
+<li><a href="rooms.html">Rooms</a></li>
+
+<li><a href="services.html">Services</a></li>
+
+<li><a href="dining.html">Dining</a></li>
+
+<li><a href="gallery.html"class="active">Gallery</a></li>
+
+<li><a href="contact.html">Contact</a></li>
+
+<li><a href="login.html">Login / Join</a></li>
+
+</ul>
+
+</nav>
+
+<a href="booking.html" class="book-btn">Book Now</a>
+
+</header>
+
+<section class="gallery-hero">
+
+<div class="hero-content">
+
+<h1>Explore Mourna Stay</h1>
+
+<p>
+Discover the elegance, comfort, and unforgettable experiences that define
+every stay at Mourna Stay. Browse through our gallery and experience luxury
+before you even arrive.
+</p>
+
+<a href="booking.html" class="hero-btn">Book Your Stay</a>
+
+</div>
+
+</section>
+<!-- LUXURY ROOMS -->
+
+<section class="gallery-section">
+
+    <h2>Luxury Rooms</h2>
+
+    <p>
+        Experience elegance and comfort in our thoughtfully designed rooms,
+        featuring modern interiors, premium amenities, and breathtaking views.
+    </p>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Luxury Room">
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=900&q=80" alt="Deluxe Room">
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=900&q=80" alt="Premium Suite">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- DINING -->
+
+<section class="gallery-section">
+
+    <h2>Dining Experience</h2>
+
+    <p>
+        Delight in exceptional culinary creations served in an elegant
+        atmosphere by our talented chefs.
+    </p>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="Restaurant">
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80" alt="Dining Area">
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Fine Dining">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- LEISURE & WELLNESS -->
+
+<section class="gallery-section">
+
+    <h2>Leisure & Wellness</h2>
+
+    <p>
+        Relax and recharge with world-class amenities including our swimming
+        pool, spa, and fully equipped fitness center.
+    </p>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=900&q=80" alt="Swimming Pool">
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=900&q=80" alt="Spa">
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=900&q=80" alt="Fitness Center">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- HOTEL SPACES -->
+
+<section class="gallery-section">
+
+    <h2>Hotel Spaces</h2>
+
+    <p>
+        From our welcoming lobby to beautifully landscaped outdoor spaces,
+        every corner of Mourna Stay is designed to create unforgettable memories.
+    </p>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=900&q=80" alt="Hotel Lobby">
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1522798514-97ceb8c4f1c8?auto=format&fit=crop&w=900&q=80" alt="Hotel Garden">
+        </div>
+
+        <div class="gallery-card">
+            <img src="https://images.unsplash.com/photo-1455587734955-081b22074882?auto=format&fit=crop&w=900&q=80" alt="Reception Area">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA SECTION -->
+
+<section class="cta-section">
+
+    <h2>Capture the Luxury, Live the Experience</h2>
+
+    <p>
+        Every image tells a story, but nothing compares to experiencing
+        Mourna Stay in person. Book your stay today and create unforgettable
+        memories with us.
+    </p>
+
+    <a href="booking.html" class="cta-btn">
+        Book Your Stay
+    </a>
+
+</section>
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+
+            <h2>Mourna Stay</h2>
+
+            <p>
+                Where luxury meets serenity. Experience premium hospitality,
+                comfort and unforgettable moments with us.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="rooms.html">Rooms</a>
+            <a href="dining.html">Dining</a>
+            <a href="services.html">Services</a>
+
+        </div>
+
+        <div class="footer-contact">
+
+            <h3>Contact</h3>
+
+            <p>📍 New Delhi, India</p>
+            <p>📞 +91 98765 43210</p>
+            <p>✉️ contact@mournastay.com</p>
+
+        </div>
+
+        <div class="footer-social">
+
+            <h3>Follow Us</h3>
+
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 Mourna Stay. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+<script>
+
+const loginBtn = document.getElementById("loginBtn");
+
+if(loginBtn){
+
+    const username = localStorage.getItem("username");
+
+    if(username){
+
+        loginBtn.textContent = username;
+
+        loginBtn.href = "profile.html";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
