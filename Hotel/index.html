@@ -585,15 +585,13 @@ animation:marqueeMove 15s linear infinite;
 }
 
 @keyframes marqueeMove{
-
 0%{
-transform:translateX(100%);
-}}
-
-100%{
-transform:translateX(-100%);
+  transform:translateX(100%);
 }
-
+100%{
+   transform:translateX(-100%);
+}
+}
 .marquee-container:hover .marquee-content{
     animation-play-state:paused;
 }
