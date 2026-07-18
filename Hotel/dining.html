@@ -730,12 +730,60 @@ delicious cuisine and unforgettable memories.
 
 
 
-<a href="contact.html">
-Book A Table
+<a href="#" class="reserve-btn" onclick="openContact(); return false;">
+    Reserve Table
 </a>
 
 
 </section>
+<div id="contactPopup" class="contact-popup">
+
+<div class="popup-box">
+
+<span class="close-btn" onclick="closeContact()">&times;</span>
+
+<h2>Reserve Your Table</h2>
+
+<p class="popup-subtitle">
+Reserve your table with Mourna Stay. We'll confirm your booking shortly.
+</p>
+
+<div class="contact-details">
+
+<div class="detail-box">
+<h4>📞 Phone</h4>
+<p>+91 98765 43210</p>
+</div>
+
+<div class="detail-box">
+<h4>✉ Email</h4>
+<p>contact@mournastay.com</p>
+</div>
+
+<div class="detail-box">
+<h4>📍 Address</h4>
+<p>New Delhi, India</p>
+</div>
+
+</div>
+
+<form>
+
+<input type="text" placeholder="Full Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="tel" placeholder="Phone Number" required>
+
+<textarea rows="5" placeholder="Preferred Date, Time and Number of Guests..." required></textarea>
+
+<button type="submit">Reserve Now</button>
+
+</form>
+
+</div>
+
+</div>
 <style>
 
 /* ================= DINING EXPERIENCE CSS ================= */
@@ -969,6 +1017,157 @@ color:white;
 text-decoration:none;
 
 border-radius:30px;
+
+}
+/* ================= CONTACT POPUP ================= */
+
+.contact-popup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.65);
+backdrop-filter:blur(5px);
+justify-content:center;
+align-items:center;
+z-index:9999;
+padding:20px;
+}
+
+.popup-box{
+width:650px;
+max-width:100%;
+background:#FAF9F6;
+border-radius:20px;
+padding:35px;
+box-shadow:0 15px 40px rgba(0,0,0,.35);
+position:relative;
+animation:popup .4s ease;
+}
+
+@keyframes popup{
+from{
+transform:translateY(-30px);
+opacity:0;
+}
+to{
+transform:translateY(0);
+opacity:1;
+}
+}
+
+.close-btn{
+position:absolute;
+top:15px;
+right:20px;
+font-size:32px;
+cursor:pointer;
+color:#5D4037;
+transition:.3s;
+}
+
+.close-btn:hover{
+color:#D4AF37;
+}
+
+.popup-box h2{
+font-family:'Playfair Display',serif;
+font-size:38px;
+color:#5D4037;
+text-align:center;
+margin-bottom:10px;
+}
+
+.popup-subtitle{
+text-align:center;
+color:#666;
+margin-bottom:30px;
+line-height:1.7;
+}
+
+.contact-details{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+margin-bottom:30px;
+}
+
+.detail-box{
+background:white;
+padding:18px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.detail-box h4{
+color:#D4AF37;
+margin-bottom:8px;
+}
+
+.detail-box p{
+font-size:14px;
+color:#555;
+}
+
+.popup-box form{
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.popup-box input,
+.popup-box textarea{
+width:100%;
+padding:14px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:15px;
+outline:none;
+transition:.3s;
+}
+
+.popup-box input:focus,
+.popup-box textarea:focus{
+border-color:#D4AF37;
+}
+
+.popup-box textarea{
+resize:none;
+}
+
+.popup-box button{
+background:#D4AF37;
+color:#5D4037;
+border:none;
+padding:14px;
+border-radius:30px;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.popup-box button:hover{
+background:#5D4037;
+color:white;
+}
+
+@media(max-width:768px){
+
+.contact-details{
+grid-template-columns:1fr;
+}
+
+.popup-box{
+padding:25px;
+}
+
+.popup-box h2{
+font-size:30px;
+}
 
 }
 
@@ -1471,6 +1670,41 @@ grid-template-columns:1fr;
 
 
 </style>
+<script>
+function openContact() {
+    document.getElementById("contactPopup").style.display = "flex";
+}
+
+function closeContact() {
+    document.getElementById("contactPopup").style.display = "none";
+}
+
+window.onclick = function(event) {
+    let popup = document.getElementById("contactPopup");
+
+    if (event.target == popup) {
+        popup.style.display = "none";
+    }
+}
+
+document.addEventListener("keydown", function(event){
+    if(event.key === "Escape"){
+        closeContact();
+    }
+});
+
+document.querySelector(".popup-box form").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    alert("Your table reservation request has been sent successfully!");
+
+    this.reset();
+
+    closeContact();
+
+});
+</script>
 
 
 </body>
