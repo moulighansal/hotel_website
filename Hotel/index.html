@@ -647,9 +647,7 @@ background:rgba(255,255,255,.12);
                 carefully crafted to make your stay comfortable and special.
             </p>
 
-            <a href="#rooms" class="btn">
-                Explore More
-            </a>
+            <a href="#rooms" class="explore-more-btn">Explore More</a>
 
         </div>
 
@@ -737,6 +735,23 @@ transition:.3s;
 background:#D4AF37;
 color:#5D4037;
 }
+
+
+.explore-more-btn{
+    background:transparent;
+    padding:10px 25px;
+    border:2px solid #D4AF37;
+    background:transparent;
+    color:#5D4037;
+    border-radius:20px;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    text-decoration: none;
+
+}
+
 </style>
 
 
@@ -752,7 +767,7 @@ color:#5D4037;
     <div class="room-container">
 
         <div class="room-card">
-            <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39" 
+            <img src="../images/room.png" 
             alt="Deluxe Room">
 
             <div class="room-info">
@@ -769,7 +784,7 @@ color:#5D4037;
 
 
         <div class="room-card">
-            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427" 
+            <img src="../images/premium.png" 
             alt="Premium Suite">
 
             <div class="room-info">
@@ -785,7 +800,7 @@ color:#5D4037;
 
 
         <div class="room-card">
-            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" 
+            <img src="../images/royal-suite.jpg" 
             alt="Royal Suite">
 
             <div class="room-info">
@@ -903,6 +918,7 @@ animation:marqueeMove 15s linear infinite;
 0%{
   transform:translateX(100%);
 }
+
 100%{
    transform:translateX(-100%);
 }
@@ -920,7 +936,7 @@ animation:marqueeMove 15s linear infinite;
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
-    border-radius: 5px;          /* slightly pointed corners */
+    border-radius: 20px;          /* slightly pointed corners */
     transition: 0.3s ease;
 }
 
@@ -1718,7 +1734,7 @@ const hero = document.querySelector(".hero");
 const images = [
     "../images/entrance.jpeg",
     "../images/interior.jpeg",
-    "../images/room.jpeg",
+    "../images/room.png",
     "../images/pool.jpeg"
 ];
 
